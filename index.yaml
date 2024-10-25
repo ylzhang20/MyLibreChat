@@ -1,0 +1,12 @@
+apiVersion: v1
+entries:
+  librechat:
+  - apiVersion: v2
+    created: "2024-10-25T11:01:11.139521657Z"
+    digest: 0204e6d71a0ddf56c4e372954d1ef476c216972623637b34801b2058dd7a3fd8
+    name: librechat
+    type: application
+    urls:
+    - https://github.com/danny-avila/LibreChat/releases/download/librechat-1.0.0/librechat-1.0.0.tgz
+    version: 1.0.0
+generated: "2024-10-25T11:01:11.139531766Z"
