@@ -23,6 +23,7 @@ export default function AgentConversationStarters({
   const inputRefs = useRef<(HTMLInputElement | null)[]>([]);
   const [dragIndex, setDragIndex] = useState<number | null>(null);
   const [dragOverIndex, setDragOverIndex] = useState<number | null>(null);
+  const [isCollapsed, setIsCollapsed] = useState<boolean>(true);
 
   useEffect(() => {
     if (field.value.length === 0) {

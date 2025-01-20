@@ -12,6 +12,16 @@ import { TooltipAnchor } from '~/components/ui';
 import { BirthdayIcon } from '~/components/svg';
 import ConvoStarter from './ConvoStarter';
 
+const getSequentialFromRandom = (arr: string[], count: number) => {
+  if (arr.length <= count) {
+    return arr;
+  }
+
+  const maxStartIndex = arr.length - count;
+  const startIndex = Math.floor(Math.random() * (maxStartIndex + 1));
+  return arr.slice(startIndex, startIndex + count);
+};
+
 export default function Landing({ Header }: { Header?: ReactNode }) {
   const { conversation } = useChatContext();
   const { data: agentData } = useGetAgentByIdQuery(conversation?.agent_id ?? '', {
@@ -95,6 +105,11 @@ export default function Landing({ Header }: { Header?: ReactNode }) {
     return localize('com_nav_welcome_message');
   };
 
+  const randomizedStarters = useMemo(
+    () => getSequentialFromRandom(conversation_starters, 4),
+    [conversation_starters],
+  );
+
   return (
     <div className="relative h-full">
       <div className="absolute left-0 right-0">{Header != null ? Header : null}</div>
@@ -135,16 +150,10 @@ export default function Landing({ Header }: { Header?: ReactNode }) {
           </h2>
         )}
         <div className="mt-8 flex flex-wrap justify-center gap-3 px-4">
-          {conversation_starters.length > 0 &&
-            conversation_starters
-              .slice(0, Constants.MAX_CONVO_STARTERS)
-              .map((text: string, index: number) => (
-                <ConvoStarter
-                  key={index}
-                  text={text}
-                  onClick={() => sendConversationStarter(text)}
-                />
-              ))}
+          {randomizedStarters.length > 0 &&
+            randomizedStarters.map((text: string, index: number) => (
+              <ConvoStarter key={index} text={text} onClick={() => sendConversationStarter(text)} />
+            ))}
         </div>
       </div>
     </div>
