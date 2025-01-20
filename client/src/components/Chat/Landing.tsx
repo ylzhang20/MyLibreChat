@@ -4,7 +4,7 @@ import { useGetEndpointsQuery, useGetStartupConfig } from 'librechat-data-provid
 import type * as t from 'librechat-data-provider';
 import type { ReactNode } from 'react';
 import { useChatContext, useAgentsMapContext, useAssistantsMapContext } from '~/Providers';
-import { useGetAssistantDocsQuery } from '~/data-provider';
+import { useGetAssistantDocsQuery, useGetAgentByIdQuery } from '~/data-provider';
 import ConvoIcon from '~/components/Endpoints/ConvoIcon';
 import { getIconEndpoint, getEntity, cn } from '~/utils';
 import { useLocalize, useSubmitMessage } from '~/hooks';
@@ -14,6 +14,10 @@ import ConvoStarter from './ConvoStarter';
 
 export default function Landing({ Header }: { Header?: ReactNode }) {
   const { conversation } = useChatContext();
+  const { data: agentData } = useGetAgentByIdQuery(conversation?.agent_id ?? '', {
+    enabled: typeof conversation?.agent_id === 'string' && conversation.agent_id.length > 0,
+  });
+
   const agentsMap = useAgentsMapContext();
   const assistantMap = useAssistantsMapContext();
   const { data: startupConfig } = useGetStartupConfig();
@@ -51,6 +55,10 @@ export default function Landing({ Header }: { Header?: ReactNode }) {
     ? (entity as t.Agent | undefined)?.avatar?.filepath ?? ''
     : ((entity as t.Assistant | undefined)?.metadata?.avatar as string | undefined) ?? '';
   const conversation_starters = useMemo(() => {
+    if (isAgent && agentData?.conversation_starters) {
+      return agentData.conversation_starters;
+    }
+
     /* The user made updates, use client-side cache, or they exist in an Agent */
     if (entity && (entity.conversation_starters?.length ?? 0) > 0) {
       return entity.conversation_starters;

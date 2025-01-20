@@ -987,7 +987,7 @@ export default {
 
   com_click_to_download: '(다운로드하려면 클릭하세요)',
 
-  com_assistants_conversation_starters_placeholder: '대화를 시작할 문구를 입력하세요',
+  com_agents_conversation_starters_placeholder: '대화를 시작할 문구를 입력하세요',
 
   com_download_expires: '(다운로드하려면 클릭하세요 - {0} 후 만료)',
 
@@ -995,7 +995,7 @@ export default {
 
   com_sidepanel_agent_builder: '에이전트 제작기',
 
-  com_assistants_conversation_starters: '대화 시작하기',
+  com_agents_conversation_starters: '대화 시작하기',
 
   com_agents_instructions_placeholder: '에이전트가 사용하는 시스템 지침',
 
@@ -1051,7 +1051,7 @@ export default {
 
   com_ui_add_model_preset: '추가 응답을 위한 모델 또는 프리셋 추가',
 
-  com_assistants_max_starters_reached: '대화 시작 문구 최대 개수에 도달했습니다',
+  com_agents_max_starters_reached: '대화 시작 문구 최대 개수에 도달했습니다',
 
   com_ui_revoke_keys: '키 취소',
 

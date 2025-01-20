@@ -681,12 +681,12 @@ export default {
 
   com_click_to_download: '(haga clic aquí para descargar)',
 
-  com_assistants_conversation_starters: 'Iniciadores de Conversación',
+  com_agents_conversation_starters: 'Iniciadores de Conversación',
 
   com_assistants_code_interpreter_info:
     'El Intérprete de Código permite al asistente escribir y ejecutar código. Esta herramienta puede procesar archivos con diversos formatos y datos, y generar archivos como gráficos.',
 
-  com_assistants_conversation_starters_placeholder: 'Ingrese un iniciador de conversación',
+  com_agents_conversation_starters_placeholder: 'Ingrese un iniciador de conversación',
 
   com_sidepanel_agent_builder: 'Constructor de Agentes',
 
@@ -820,7 +820,7 @@ export default {
   com_ui_add_model_preset:
     'Agregar un modelo o configuración preestablecida para una respuesta adicional',
 
-  com_assistants_max_starters_reached: 'Se alcanzó el número máximo de iniciadores de conversación',
+  com_agents_max_starters_reached: 'Se alcanzó el número máximo de iniciadores de conversación',
 
   com_ui_loading: 'Cargando...',
 

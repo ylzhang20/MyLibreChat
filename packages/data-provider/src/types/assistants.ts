@@ -229,6 +229,7 @@ export type AgentCreateParams = {
   provider: AgentProvider;
   model: string | null;
   model_parameters: AgentModelParameters;
+  conversation_starters?: string[];
 } & Pick<Agent, 'agent_ids' | 'end_after_tools' | 'hide_sequential_outputs'>;
 
 export type AgentUpdateParams = {
@@ -242,6 +243,7 @@ export type AgentUpdateParams = {
   provider?: AgentProvider;
   model?: string | null;
   model_parameters?: AgentModelParameters;
+  conversation_starters?: string[] | null;
   projectIds?: string[];
   removeProjectIds?: string[];
   isCollaborative?: boolean;

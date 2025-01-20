@@ -669,9 +669,9 @@ export default {
   com_assistants_code_interpreter_info:
     'Интерпретатор кода позволяет ассистенту создавать и выполнять код. Этот инструмент может обрабатывать файлы с различными данными и форматами, а также создавать файлы, например графики.',
 
-  com_assistants_conversation_starters_placeholder: 'Введите начальную фразу для разговора',
+  com_agents_conversation_starters_placeholder: 'Введите начальную фразу для разговора',
 
-  com_assistants_conversation_starters: 'Примеры запросов',
+  com_agents_conversation_starters: 'Примеры запросов',
 
   com_sidepanel_agent_builder: 'Конструктор агента',
 
@@ -801,7 +801,7 @@ export default {
 
   com_ui_add_model_preset: 'Добавить модель или пресет для дополнительного ответа',
 
-  com_assistants_max_starters_reached: 'Достигнуто максимальное количество начальных подсказок',
+  com_agents_max_starters_reached: 'Достигнуто максимальное количество начальных подсказок',
 
   com_ui_all_proper: 'Все',
 

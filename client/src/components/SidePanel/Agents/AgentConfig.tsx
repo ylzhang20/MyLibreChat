@@ -16,6 +16,7 @@ import { useCreateAgentMutation, useUpdateAgentMutation } from '~/data-provider'
 import { useLocalize, useAuthContext, useHasAccess } from '~/hooks';
 import { useToastContext, useFileMapContext } from '~/Providers';
 import { icons } from '~/components/Chat/Menus/Endpoints/Icons';
+import { AgentConversationStarters } from '~/components/ui';
 import Action from '~/components/SidePanel/Builder/Action';
 import { ToolSelectDialog } from '~/components/Tools';
 import DuplicateAgent from './DuplicateAgent';
@@ -33,7 +34,7 @@ import { Panel } from '~/common';
 const labelClass = 'mb-2 text-token-text-primary block font-medium';
 const inputClass = cn(
   defaultTextProps,
-  'flex w-full px-3 py-2 border-border-light bg-surface-secondary focus-visible:ring-2 focus-visible:ring-ring-primary',
+  'flex w-full px-3 py-2 dark:border-surface-secondary dark:bg-surface-secondary rounded-xl mb-2 transition-all duration-200',
   removeFocusOutlines,
 );
 
@@ -307,6 +308,22 @@ export default function AgentConfig({
                   </span>
                 )}
               </>
+            )}
+          />
+        </div>
+        {/* Conversation Starters */}
+        <div className="relative mb-6">
+          {/* the label of conversation starters is in the component */}
+          <Controller
+            name="conversation_starters"
+            control={control}
+            defaultValue={[]}
+            render={({ field }) => (
+              <AgentConversationStarters
+                field={field}
+                inputClass={inputClass}
+                labelClass={labelClass}
+              />
             )}
           />
         </div>

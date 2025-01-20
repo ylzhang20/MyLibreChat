@@ -14,13 +14,12 @@ import type { FunctionTool, TConfig, TPlugin } from 'librechat-data-provider';
 import type { AssistantForm, AssistantPanelProps } from '~/common';
 import { useCreateAssistantMutation, useUpdateAssistantMutation } from '~/data-provider';
 import { cn, cardStyle, defaultTextProps, removeFocusOutlines } from '~/utils';
-import AssistantConversationStarters from './AssistantConversationStarters';
+import { SelectDropDown, AgentConversationStarters } from '~/components/ui';
 import { useAssistantsMapContext, useToastContext } from '~/Providers';
 import { useSelectAssistant, useLocalize } from '~/hooks';
 import { ToolSelectDialog } from '~/components/Tools';
 import CapabilitiesForm from './CapabilitiesForm';
 import AppendDateCheckbox from './AppendDateCheckbox';
-import { SelectDropDown } from '~/components/ui';
 import AssistantAvatar from './AssistantAvatar';
 import AssistantSelect from './AssistantSelect';
 import ContextButton from './ContextButton';
@@ -339,7 +338,7 @@ export default function AssistantPanel({
               control={control}
               defaultValue={[]}
               render={({ field }) => (
-                <AssistantConversationStarters
+                <AgentConversationStarters
                   field={field}
                   inputClass={inputClass}
                   labelClass={labelClass}

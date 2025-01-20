@@ -597,11 +597,11 @@ export default {
   com_error_files_upload_canceled:
     '檔案上傳請求已取消。注意：檔案上傳可能仍在處理中，需要手動刪除。',
   com_click_to_download: '（點選此處下載）',
-  com_assistants_conversation_starters_placeholder: '輸入對話開場白',
+  com_agents_conversation_starters_placeholder: '輸入對話開場白',
   com_download_expires: '(點擊此處下載 - {0} 後過期)',
   com_sidepanel_agent_builder: '代理建構器',
   com_agents_name_placeholder: '選填：代理人的名稱',
-  com_assistants_conversation_starters: '對話起點',
+  com_agents_conversation_starters: '對話起點',
   com_agents_description_placeholder: '選填：在此描述您的代理程式',
   com_assistants_code_interpreter_info:
     '程式碼解譯器可讓助理撰寫和執行程式碼。此工具能處理各種資料格式的檔案，並產生圖表等檔案。',
@@ -664,7 +664,7 @@ export default {
   com_ui_renaming_var: '重新命名「{0}」',
   com_ui_latest_footer: '讓每個人都能使用 AI',
   com_ui_upload_invalid: '上傳的檔案無效。必須是不超過限制的圖片檔',
-  com_assistants_max_starters_reached: '已達對話起始項目的最大數量',
+  com_agents_max_starters_reached: '已達對話起始項目的最大數量',
   com_ui_add_model_preset: '新增模型或預設設定以取得額外回應',
   com_ui_upload_invalid_var: '上傳的檔案無效。必須是不超過 {0} MB 的圖片檔案',
   com_ui_loading: '載入中...',

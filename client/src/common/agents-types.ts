@@ -23,6 +23,7 @@ export type AgentForm = {
   instructions: string | null;
   model: string | null;
   model_parameters: AgentModelParameters;
+  conversation_starters: string[];
   tools?: string[];
   provider?: AgentProvider | OptionWithIcon;
   agent_ids?: string[];

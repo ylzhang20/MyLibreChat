@@ -146,6 +146,7 @@ export const defaultAgentFormValues = {
   instructions: '',
   model: '',
   model_parameters: {},
+  conversation_starters: [],
   tools: [],
   provider: {},
   projectIds: [],

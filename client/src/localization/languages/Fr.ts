@@ -778,10 +778,10 @@ export default {
   com_download_expired: 'Téléchargement expiré',
   com_download_expires: '(cliquez ici pour télécharger - expire le {0})',
   com_click_to_download: '(cliquez ici pour télécharger)',
-  com_assistants_conversation_starters: 'Suggestions de conversation',
+  com_agents_conversation_starters: 'Suggestions de conversation',
   com_assistants_code_interpreter_info:
     'L\'interpréteur de code permet à l\'assistant d\'écrire et d\'exécuter du code. Cet outil peut traiter des fichiers avec différents formats de données et générer des fichiers tels que des graphiques.',
-  com_assistants_conversation_starters_placeholder: 'Saisissez une amorce de conversation',
+  com_agents_conversation_starters_placeholder: 'Saisissez une amorce de conversation',
   com_sidepanel_agent_builder: 'Constructeur d\'agent',
   com_agents_name_placeholder: 'Facultatif : Le nom de l\'agent',
   com_agents_instructions_placeholder: 'Les instructions système que l\'agent utilise',
@@ -815,7 +815,7 @@ export default {
     'Utilisez `{{current_date}}` pour la date actuelle et `{{current_user}}` pour votre nom de compte.',
   com_ui_select_search_region: 'Rechercher une région par nom',
   com_ui_dropdown_variables: 'Variables déroulantes :',
-  com_assistants_max_starters_reached: 'Nombre maximum de démarreurs de conversation atteint',
+  com_agents_max_starters_reached: 'Nombre maximum de démarreurs de conversation atteint',
   com_ui_dropdown_variables_info:
     'Créez des menus déroulants personnalisés pour vos prompts : `{{nom_variable:option1|option2|option3}}`',
   com_ui_revoke_keys: 'Révoquer les clés',
